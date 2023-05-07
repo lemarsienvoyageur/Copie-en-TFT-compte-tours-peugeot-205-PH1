@@ -47,7 +47,9 @@ long timeRef = 0;
 long delai = 250;
 long timeRef1 = 0;
 long delai1 = 1000;
-signed angle = -256;
+volatile signed angle = -256;
+volatile signed oldangle = -256;
+volatile signed newangle = -256;
 long signed temp = 0.00;
 long signed temp2 = 0.00;
 
@@ -130,9 +132,6 @@ void loop()
   if (millis() >= timeRef + delai) {
     tr = (comptageImpuls / 2) * 240;
     angle = map(tr, 0, 8000, -256, 2000);
-    if(angle < -256){ angle = -256;}
-    if(angle > 2000){ angle = 2000;}
-    lv_img_set_angle(ui_needle, angle);
     comptageImpuls = 0;
     timeRef = millis();
   }
@@ -148,4 +147,22 @@ void loop()
     timeRef1 = millis();
   }
 
+}
+
+  incremente();
+}
+
+void incremente(){
+
+  if (angle < oldangle - 10){
+    newangle = oldangle --;
+  }
+
+  if (angle > oldangle + 10){
+    newangle = oldangle ++;
+  }
+
+  if(newangle < -256){ newangle = -256;}
+  if(newangle > 2000){ newangle = 2000;}
+  lv_img_set_angle(ui_needle, newangle);
 }
