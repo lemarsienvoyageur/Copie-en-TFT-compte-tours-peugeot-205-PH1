@@ -17,7 +17,7 @@ Arduino_DataBus *bus = new Arduino_ESP32SPI(21 /* DC */, 22 /* CS */, 18 /* SCK 
 Arduino_GFX *gfx = new Arduino_ILI9341(bus, 17 /* RST */, 3 /* rotation */, false /* IPS */);
 
 const int PIN_SIGNAL_1 = 26;
-const int PIN_VEIL = 26;
+const int PIN_VEIL = 27;
 static uint32_t screenWidth;
 static uint32_t screenHeight;
 static lv_disp_draw_buf_t draw_buf;
