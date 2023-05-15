@@ -18,3 +18,12 @@ ESP32-WROOM32 https://fr.aliexpress.com/item/1005004879572949.html?spm=a2g0o.pro
 
 # MAJ 2.4.6
 Augmentation de la réactivité de l'aiguille (ce déplace plus vite à l'écrant sant sacader)
+
+# MAJ 2.9.0
+Pas de changement au niveau programme
+
+Nouveau fond de compteur. refait entièrement avec inkscape au lieu d'une photo
+
+Nouvelle éguille. L'éguille est au dessus du fond et non en dessous!
+
+[compteur](https://github.com/lemarsienvoyageur/Copie-en-TFT-compte-tours-peugeot-205-PH1/assets/97837322/d940418c-11eb-4e1b-833c-3920263c39bb)
